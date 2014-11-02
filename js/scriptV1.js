@@ -66,10 +66,10 @@ function timeBlock(name, length, x, y, width, height, color, showBlock, delay, u
   this.update = function(newValue) {
     var self = this;
     var oldValue = this.svg.select("g." + this.name + " text.label").text();
-    if(oldValue !== newValue) {
+    if((oldValue * 1) !== newValue || oldValue === '') {
       this.svg.select("g." + this.name + " text.label")
         .transition().duration(this.delay).style("opacity", 0)
-        .transition().duration(this.delay).style("opacity", 1).text(newValue - 0);
+        .transition().duration(this.delay).style("opacity", 1).text(newValue);
     }
 
     var value = newValue * 1;
