@@ -1,4 +1,5 @@
 function ready() {
+	d3.select('svg').attr('width', '600px').attr('height', '600px');
 	year = new timeBlock("year", 10, 0,100, 600,30, "#f66", false);
 	month = new timeBlock("month", 31, 0,150, 600,30, "#f66");
 	date = new timeBlock("day", 24, 0,200, 600,30, "#f66");
